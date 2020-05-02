@@ -7,13 +7,17 @@
     <tr>
       <th>タイトル</th>
       <th>本文</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
   {% for topic in list %}
     <tr>
-      <td>{{ topic.title }}</td>
+      <td><a href="{% url 'board:detail' topic.pk %}">{{ topic.title }}</a></td>      
       <td>{{ topic.text }}</td>
+      <td><a href="{% url 'board:update' topic.pk %}">更新</a></td>
+      <td><a href="{% url 'board:delete' topic.pk %}">削除</a></td>      
     </tr>
   {% endfor %}
   </tbody>
