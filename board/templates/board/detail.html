@@ -1,0 +1,14 @@
+{% extends 'board/base.html' %}
+
+{% block content %}
+  <table class='table'>
+    <tr>
+      <th>タイトル</th>
+      <td>{{ topic.title }}</td>
+    </tr>
+    <tr>
+      <th>本文</th>
+      <td>{{ topic.text | linebreaksbr}}</td>
+    </tr>
+  </table>
+{% endblock %}
