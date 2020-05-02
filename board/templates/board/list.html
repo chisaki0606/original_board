@@ -1,0 +1,21 @@
+{% extends 'board/base.html' %}
+
+{% block content %}
+<h1>トピック一覧</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>本文</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for topic in list %}
+    <tr>
+      <td>{{ topic.title }}</td>
+      <td>{{ topic.text }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
